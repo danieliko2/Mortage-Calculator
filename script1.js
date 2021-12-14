@@ -46,9 +46,17 @@ function valuesTest(){
 //     myBarChart.update();
 // }
 
+let colors = [
+    'rgba(255, 99, 132, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(255, 206, 86, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)' ];
 function updateTable(){
     let maslulLength = $('.maslulim').length;
     for(let i = 1; i <= maslulLength; i++) {
+        let j=i;
         months = [];
         amount = parseInt(document.getElementById(`inputAmount${i}`).value);    
         percent = parseInt(document.getElementById(`inputPercent${i}`).value);
@@ -65,14 +73,7 @@ function updateTable(){
                 fill: true,
                 label: 'החזר חודשי',
                 data: months,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)'],
-                //     'rgba(54, 162, 235, 0.2)',
-                //     'rgba(255, 206, 86, 0.2)',
-                //     'rgba(75, 192, 192, 0.2)',
-                //     'rgba(153, 102, 255, 0.2)',
-                //     'rgba(255, 159, 64, 0.2)'
-                // ],
+                backgroundColor: colors[i%6],
                 // borderColor: [
                 //     'rgba(255, 99, 132, 1)',
                 //     'rgba(54, 162, 235, 1)',

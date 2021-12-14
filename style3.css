@@ -29,7 +29,7 @@
 }
 .contentMedium{
     border:solid;
-    flex: 46%;
+    flex: 64%;
     /* height: 50%;
     width: 50%; */
     background-color: rgb(185, 184, 184);
@@ -39,6 +39,18 @@
     margin-bottom: 10px;
     margin-right: 2%;
     /* padding: 5px; */
+}
+.contentSmall{
+    border:solid;
+    flex: 24%;
+    /* height: 50%;
+    width: 50%; */
+    background-color: rgb(185, 184, 184);
+    border-width: 1px;
+
+    border-color: rgb(116, 110, 110);
+    margin-bottom: 10px;
+    margin-right: 2%;
 }
 footer{
     padding: 5px;        
