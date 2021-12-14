@@ -1,0 +1,60 @@
+.heading{
+    background-color: grey;
+}
+.heading2{
+    color:rgb(45, 184, 45)
+}
+.tamhilMenu{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+.tamhilMenuItem{
+    display:inline;
+
+    background-color: grey;
+}
+.tamhilContent{
+    width: 95%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    border:solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 5px;
+    /* flex-direction: row; */
+    background-color: rgb(143, 233, 255);
+}
+.contentMedium{
+    border:solid;
+    flex: 46%;
+    /* height: 50%;
+    width: 50%; */
+    background-color: rgb(185, 184, 184);
+    border-width: 1px;
+
+    border-color: rgb(116, 110, 110);
+    margin-bottom: 10px;
+    margin-right: 2%;
+    /* padding: 5px; */
+}
+footer{
+    padding: 5px;        
+    background-color: rgb(224, 219, 219);
+}
+.mainContainer{
+    padding: 1%;
+}
+body{
+    margin: 15px;
+    background-color: rgb(255, 250, 203);
+}
+.tamhilGraphs{
+
+    background-color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+}
