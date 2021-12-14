@@ -89,6 +89,9 @@ function updateTable(){
     }
 
 }
+function newFunc(){
+    alert("newfunc");
+}
 
 function addMaslul(){
     var maslulNum = $('.maslulim').length +1;
