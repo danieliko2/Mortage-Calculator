@@ -4,17 +4,44 @@
 .heading2{
     color:rgb(45, 184, 45)
 }
-.tamhilMenu{
+.tamhilimHeading{
     list-style-type: none;
     margin:0;
     padding:0;
     overflow:hidden;
 }
-.tamhilMenuItem{
+
+.tamhilimNavbar{
+    background-color: gray;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+.tamhilimNavbar li{
+    float: right;
+}
+.tamhilNavItem{
     display:inline;
 
     background-color: grey;
 }
+.tamhilimNavbar li a{
+    display: block; 
+    color: white;
+    padding: 0px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.tamhilimNavbar li a:hover {
+    background-color: #111;
+  }
+  
+  .tamhilimNavbar li a:active{
+    background-color: #111;
+  }
+
 .tamhilContent{
     width: 95%;
     
@@ -70,3 +97,4 @@ body{
     border-width: 1px;
     border-color: black;
 }
+

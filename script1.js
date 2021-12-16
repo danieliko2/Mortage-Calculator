@@ -113,3 +113,30 @@ function addMaslul(){
     var oldiv=$(`#maslul${maslulNum-1}`);
     $(oldiv).after(div2);
 }
+
+function addTamhil(){
+    console.log("new tamhil clicked")
+    var ul = document.getElementById("tamhilimNavbar");
+    var liNum = $('ul#tamhilimNavbar li').length;
+    
+    console.log(liNum);
+
+    document.getElementById("addTamhil").innerHTML=`תמהיל ${liNum}`;
+    document.getElementById("addTamhil").setAttribute('id', `tamhil${liNum}NavItem`);
+    document.getElementById(`tamhil${liNum}NavItem`).setAttribute('onClick', 'showTamhil(this.id)');
+
+    var li = document.createElement("li");
+    //li.appendChild(document.createTextNode("הוסף תמהיל"));
+    li.innerHTML=`<a class="navbar1Li" id="addTamhil" onclick="addTamhil()" href="javascript:void(null);">הוסף תמהיל</a>`;
+    ul.appendChild(li);
+
+    var tamhilN = $('.tamhilimNavbar').length +1;
+    console.log(tamhilN);
+    var div2=$(`<a class="tamhilNavItem" id="tamhil${tamhilN}NavItem" onclick="showTamhil(this.id)" href="javascript:void(null);">tamhil${tamhilN}</a>`);
+    console.log(div2);
+    var oldiv=$(`#tamhil${tamhilN-1}`);
+    $(oldiv).after(div2);
+}
+function showTamhil(tamhilId){
+    console.log(tamhilId);
+}

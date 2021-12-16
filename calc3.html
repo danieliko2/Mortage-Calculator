@@ -10,6 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    
 </head>
 <body>
     
@@ -20,21 +22,17 @@
     <div class="mainContainer">
         
         <div class="tamhilimHeading">
-            <ul class="tamhilimMenu">
-                <li class="tamhilMenuItem">
-                    <a>tamhil1</a>
+            <ul class="tamhilimNavbar" id="tamhilimNavbar">
+                <li>
+                    <a class="tamhilNavItem" id="tamhil1NavItem" onclick="showTamhil(this.id)" href="javascript:void(null);">tamhil1</a>
                 </li>
-                <li class="tamhilMenuItem">
-                    <a>tamhil2</a>
+                <li class="tamhilNavItem">
+                    <a class="navbar1Li" id="addTamhil" onclick="addTamhil()" href="javascript:void(null);">הוסף תמהיל</a>
                 </li>
-                <li class="tamhilMenuItem">
-                    <a>tamhil3</a>
-                </li>
-                <li class="tamhilMenuItem">
-                    <a>tamhil4</a>
-                </li>
+
             </ul>
         </div>
+
         <div class="tamhilim">
             <div class="tamhilContent">
 
@@ -56,17 +54,17 @@
                         </select>
                         <br>
                         <label for="inputPercent" style="font-size: 15px; color: rgb(59, 58, 58);">אחוז</label>
-                        <input type="text" placeholder="אחוז" id="inputPercent1" size="10" data-type="number" title="אחוז"/>
-                        <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">סכום</label>
-                        <input type="text" placeholder="סכום" id="inputAmount1" size="10" data-type="number"/>
+                        <input type="text" placeholder="אחוז" class="maslulInputs" id="inputPercent1" size="10" data-type="number" title="אחוז"/>
+                        <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;" >סכום</label>
+                        <input type="text" placeholder="סכום" id="inputAmount1" size="10" data-type="number" title="סכום"/>
                         <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;" >תקופה בחודשים</label>
-                        <input type="text" placeholder="תקופה" id="inputMonths1" size="10" data-type="number"/>
+                        <input type="text" placeholder="תקופה" id="inputMonths1" size="10" data-type="number" title="תקופה בחודשים"/>
                         <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">ריבית עוגן</label>
-                        <input type="text" placeholder="ריבית עוגן" id="inputRibitOgen1" size="10" data-type="number"/>
+                        <input type="text" placeholder="ריבית עוגן" id="inputRibitOgen1" size="10" data-type="number" title="ריבית עוגן"/>
                         <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">ריבית מרווח</label>
-                        <input type="text" placeholder="ריבית מרווח" id="inputInterval1" size="10" data-type="number"/>
+                        <input type="text" placeholder="ריבית מרווח" id="inputInterval1" size="10" data-type="number" title="ריבית מרווח"/>
                         <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">ריבית סופית</label>
-                        <input type="text" placeholder="ריבית סופית" id="inputRibitOgen1" size="10" data-type="number"/>
+                        <input type="text" placeholder="ריבית סופית" id="inputRibitOgen1" size="10" data-type="number" title="ריבית סופית"/>
 
                         <br>
                         <a id="totalAmount1">סכום כללי: </a>
