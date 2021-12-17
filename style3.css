@@ -4,6 +4,9 @@
 .heading2{
     color:rgb(45, 184, 45)
 }
+.tamhilim{
+    display:block;
+}
 .tamhilimHeading{
     list-style-type: none;
     margin:0;
@@ -55,6 +58,7 @@
     background-color: rgb(143, 233, 255);
 }
 .contentMedium{
+    /* display:flex; */
     border:solid;
     flex: 64%;
     /* height: 50%;
@@ -91,10 +95,9 @@ body{
     background-color: rgb(255, 250, 203);
 }
 .tamhilGraphs{
-
+    display:flex;
     background-color: white;
     border: solid;
     border-width: 1px;
     border-color: black;
 }
-

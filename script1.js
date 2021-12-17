@@ -139,4 +139,70 @@ function addTamhil(){
 }
 function showTamhil(tamhilId){
     console.log(tamhilId);
+    var testDiv=$(`<div><a> This is a test </a> </div>`)
+    var newTamhil=$(`
+    <div class="tamhilim">
+        <div class="tamhilContent">
+
+            <div class="contentMedium"><!-- input section> -->
+                <div class="maslulim" id="maslul1">
+                    <label for="" id="maslulID1" style="font-size:  smaller;">מסלול 1</label>
+                    <select id="maslulType1">
+                        <option value="שפיצר"> שפיצר</option>
+                        <option value="קרן שווה">קרן שווה</option>
+                    </select>
+                    <select id="maslulType1">
+                        <option value="סוג ריבית">סוג ריבית</option>
+                        <option value="type1">1</option>
+                    </select>
+                    <select id="grice"> 
+                        <option value="גרייס">גרייס</option>
+                        <option value="חלקי">חלקי</option>
+                        <option value="מלא">מלא</option>
+                    </select>
+                    <br>
+                    <label for="inputPercent" style="font-size: 15px; color: rgb(59, 58, 58);">אחוז</label>
+                    <input type="text" placeholder="אחוז" class="maslulInputs" id="inputPercent1" size="10" data-type="number" title="אחוז"/>
+                    <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;" >סכום</label>
+                    <input type="text" placeholder="סכום" id="inputAmount1" size="10" data-type="number" title="סכום"/>
+                    <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;" >תקופה בחודשים</label>
+                    <input type="text" placeholder="תקופה" id="inputMonths1" size="10" data-type="number" title="תקופה בחודשים"/>
+                    <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">ריבית עוגן</label>
+                    <input type="text" placeholder="ריבית עוגן" id="inputRibitOgen1" size="10" data-type="number" title="ריבית עוגן"/>
+                    <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">ריבית מרווח</label>
+                    <input type="text" placeholder="ריבית מרווח" id="inputInterval1" size="10" data-type="number" title="ריבית מרווח"/>
+                    <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">ריבית סופית</label>
+                    <input type="text" placeholder="ריבית סופית" id="inputRibitOgen1" size="10" data-type="number" title="ריבית סופית"/>
+
+                    <br>
+                    <a id="totalAmount1">סכום כללי: </a>
+                    <a id="monthlyAmount1">סכום חודשי: </a>
+                </div>
+                <input type="button" value="הוסף מסלול" onclick="addMaslul()">
+            </div>
+            <div class="contentSmall">
+                <button>כפתור 1</button>
+                <button>כפתור 1</button>
+                <button>כפתור 1</button>
+                <button>כפתור 1</button>
+            </div>
+
+            <div class="contentMedium">
+                <input type="button" value="עדכן ערכים" onclick="updateTable()">
+                <input type="button" value="בדיקה" onclick="valuesTest()">
+                <div class="tamhilGraphs">
+                    <canvas id="myBarChart"></canvas>
+                </div>
+                <div class="tamhilGraphs">
+                    <canvas id="myPieChart" height="200"></canvas>
+                </div>
+            </div>
+            <div class="contentSmall">content4</div>
+
+        </div>
+    </div>
+</div>`);
+    var oldtamhil = $(`#tamhilim`)
+    console.log(oldtamhil);
+   $(oldtamhil).after(testDiv);
 }
