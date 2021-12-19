@@ -15,11 +15,22 @@
     <title>Document</title>
 </head>
 <body>
-    <p data-tip="This is the text of the tooltip">This is a paragraph of text that has a tooltip.</p>
-
-    <div data-tip="This is the text of the tooltip2">
-        <input type="text" name="test" value="44"/>
+    <div id="myDiv">
+        <input type="button" value="Clickme1">
     </div>
-</div> 
+</div>
+<input type="button" value="NewItem" onclick=newItem()>
+<script>
+    function newItem(tamhilId){
+
+        console.log(tamhilId);
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML =`<input type="button" value="Clickme${2}">`;
+        var oldDiv = document.getElementById("myDiv");
+        //console.log(oldtamhil);
+        $(oldDiv).after(newDiv);
+        oldDiv.style.display="none";
+}
+</script>
 </body>
 </html>
