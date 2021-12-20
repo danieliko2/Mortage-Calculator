@@ -97,21 +97,19 @@ body{
 }
 #graphsHeader{
     display: block;
-    flex:100%;
+    width: 100%;
+    grid-column: 1 / -1 !important; 
 }
 #Graphs{
-    width: 100%;
-    display: flex;
-    flex: 2;
-    flex-wrap: wrap !important;
+    display: grid;
+    grid-template-columns: auto auto;
     background-color: rgb(185, 184, 184);
-    flex-direction: row;
 }
 .tamhilGraphs{
-    width: 50%;
+    display:block;
     background-color: white;
     border: solid;
     border-width: 1px;
     border-color: black;
-    flex: 50%;
+    width: 70%;
 }
