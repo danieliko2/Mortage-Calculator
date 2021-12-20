@@ -49,7 +49,7 @@
     width: 95%;
     
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     border:solid;
     border-width: 1px;
     border-color: black;
@@ -60,7 +60,7 @@
 .contentMedium{
     /* display:flex; */
     border:solid;
-    flex: 64%;
+    flex: 64% !important;
     /* height: 50%;
     width: 50%; */
     background-color: rgb(185, 184, 184);
