@@ -137,86 +137,24 @@ function addTamhil(){
     var oldTamhilLi=document.getElementById(`tamhil${tamhilN-1}NavItem`)
     //$(oldTamhilLi).after(tamhil2Li);
 
-    console.log(tamhilId);
+    //console.log(tamhilId);
     var newDiv = document.createElement("div");
-    newDiv.innerHTML =`<input type="button" value="Clickme${2}">`;
-    var oldDiv = document.getElementById(`tamhil1`);
+    newDiv.innerHTML =`<div id="tamhil${liNum}"><input type="button" value="tamhil${liNum}"> </div>`;
+    var oldDiv = document.getElementById(`tamhil${liNum-1}`);
     //console.log(oldtamhil);
     $(oldDiv).after(newDiv);
     oldDiv.style.display="none";
 
 }
 function showTamhil(tamhilId){
-    // console.log(tamhilId);
-    // var tamhilNum = $('ul#tamhilimNavbar li').length;
-    // var thisID = parseInt(tamhilId.slice(-1));
-    // for (let i = 1; i <= tamhilNum; i++){
-    //     document.getElementById(`tamhil${i}NavItem`).style.backgroundColor = "white";
-    // }
-    // console.log(tamhilNum);
-    // document.getElementById(`tamhil${tamhilNum}NavItem`).style.backgroundColor = "black";
+    var liNum = $('ul#tamhilimNavbar li').length;
+    for (let i=1; i< liNum; i++){
+        document.getElementById(`tamhil${i}`).style.display = "none";
+    }
+    //let thisNum = tamhilId.slice(-8);
+    //let thisNum = tamhilId[tamhilId.length-8];
+    let thisNum = tamhilId.replace(/[^0-9]/g, ''); 
+    document.getElementById(`tamhil${thisNum}`).style.display = "block";
+    //console.log(thisNum);
 
-    var newTamhilx = document.createElement("div");
-    newTamhilx.innerHTML =`<div class="tamhilContent">
-
-    <div class="contentMedium"><!-- input section> -->
-        <div class="maslulim" id="maslul1">
-            <label for="" id="maslulID1" style="font-size:  smaller;">מסלול 1</label>
-            <select id="maslulType1">
-                <option value="שפיצר"> שפיצר</option>
-                <option value="קרן שווה">קרן שווה</option>
-            </select>
-            <select id="maslulType1">
-                <option value="סוג ריבית">סוג ריבית</option>
-                <option value="type1">1</option>
-            </select>
-            <select id="grice"> 
-                <option value="גרייס">גרייס</option>
-                <option value="חלקי">חלקי</option>
-                <option value="מלא">מלא</option>
-            </select>
-            <br>
-            <label for="inputPercent" style="font-size: 15px; color: rgb(59, 58, 58);">אחוז</label>
-            <input type="text" placeholder="אחוז" class="maslulInputs" id="inputPercent1" size="10" data-type="number" title="אחוז"/>
-            <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;" >סכום</label>
-            <input type="text" placeholder="סכום" id="inputAmount1" size="10" data-type="number" title="סכום"/>
-            <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;" >תקופה בחודשים</label>
-            <input type="text" placeholder="תקופה" id="inputMonths1" size="10" data-type="number" title="תקופה בחודשים"/>
-            <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">ריבית עוגן</label>
-            <input type="text" placeholder="ריבית עוגן" id="inputRibitOgen1" size="10" data-type="number" title="ריבית עוגן"/>
-            <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">ריבית מרווח</label>
-            <input type="text" placeholder="ריבית מרווח" id="inputInterval1" size="10" data-type="number" title="ריבית מרווח"/>
-            <label for="inputAmount" style="font-size: 15px; color:rgb(59, 58, 58);;">ריבית סופית</label>
-            <input type="text" placeholder="ריבית סופית" id="inputRibitOgen1" size="10" data-type="number" title="ריבית סופית"/>
-
-            <br>
-            <a id="totalAmount1">סכום כללי: </a>
-            <a id="monthlyAmount1">סכום חודשי: </a>
-        </div>
-        <input type="button" value="הוסף מסלול" onclick="addMaslul()">
-    </div>
-    <div class="contentSmall">
-        <button>כפתור 1</button>
-        <button>כפתור 1</button>
-        <button>כפתור 1</button>
-        <button>כפתור 1</button>
-    </div>
-
-    <div class="contentMedium">
-        <input type="button" value="עדכן ערכים" onclick="updateTable()">
-        <input type="button" value="בדיקה" onclick="valuesTest()">
-        <div class="tamhilGraphs">
-            <canvas id="myBarChart"></canvas>
-        </div>
-        <div class="tamhilGraphs">
-            <canvas id="myPieChart" height="200"></canvas>
-        </div>
-    </div>
-    <div class="contentSmall">content4</div>
-
-</div>
-</div>`
-    var oldtamhil = $(`#tamhilim`)
-    console.log(oldtamhil);
-   $(oldtamhil).after(testDiv);
 }
