@@ -87,7 +87,7 @@ function updateTable(){
     }
 }
 function addMaslul(){
-    var maslulNum = $('.maslulim').length +1;
+    var maslulNum = $('.maslulim').length +1; // create new Maslul
     var div2=$(`<div class="maslulim" id="maslul${maslulNum}">
                     <label for="inputPercent" style="font-size: 15px; color:gray;">אחוז</label>
                     <input type="text" placeholder="אחוז" id="inputPercent${maslulNum}" data-type="number"/>
@@ -143,10 +143,7 @@ function showTamhil(tamhilId){
         document.getElementById(`tamhil${i}NavItem`).style.backgroundColor = "grey";
         document.getElementById(`tamhil${i}`).style.display = "none ";
     }
-    //let thisNum = tamhilId.slice(-8);
-    //let thisNum = tamhilId[tamhilId.length-8];
-    let thisNum = tamhilId.replace(/[^0-9]/g, ''); 
+    let thisNum = tamhilId.replace(/[^0-9]/g, ''); //get tamhil number
     document.getElementById(`tamhil${thisNum}`).style.display = "flex";
     document.getElementById(`tamhil${thisNum}NavItem`).style.backgroundColor = "rgb(70, 69, 69)";
-    //console.log(thisNum);
 }

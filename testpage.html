@@ -2,24 +2,44 @@
 <html lang="en">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <style>
+        #mainDiv{
+            background-color: darkgreen;
 
-        </style>
-
-
+            width: 100%;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .thisDivs{
+            flex:48%;
+            border-width: 3px;
+            border-color: black;
+        }
+    </style>
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div id="myDiv">
-        <input type="button" value="Clickme1">
+    <div id="mainDiv">
+        <div class="thisDivs" id="div1">
+            <p>Part 1</p>
+        </div>
+        <div class="thisDivs" id="div2">
+            <p>Part 2</p>
+        </div>
+        <div class="thisDivs" id="div3">
+            <p>Part 3</p>
+        </div>
+        <div class="thisDivs" id="div4">
+            <p>Part 4</p>
+        </div>
     </div>
-</div>
-<input type="button" value="NewItem" onclick=newItem()>
+<!-- <input type="button" value="NewItem" onclick=newItem()> -->
 <script>
     function newItem(tamhilId){
 

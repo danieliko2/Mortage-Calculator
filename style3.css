@@ -47,9 +47,10 @@
 
 .tamhilContent{
     width: 95%;
-    
     display: flex;
+    flex: 1;
     flex-wrap: wrap !important;
+
     border:solid;
     border-width: 1px;
     border-color: black;
@@ -94,10 +95,23 @@ body{
     margin: 15px;
     background-color: rgb(255, 250, 203);
 }
+#graphsHeader{
+    display: block;
+    flex:100%;
+}
+#Graphs{
+    width: 100%;
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap !important;
+    background-color: rgb(185, 184, 184);
+    flex-direction: row;
+}
 .tamhilGraphs{
-    display:flex;
+    width: 50%;
     background-color: white;
     border: solid;
     border-width: 1px;
     border-color: black;
+    flex: 50%;
 }
