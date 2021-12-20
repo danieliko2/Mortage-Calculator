@@ -38,11 +38,11 @@
 }
 
 .tamhilimNavbar li a:hover {
-    background-color: #111;
+    background-color:rgb(70, 69, 69) !important;
   }
   
   .tamhilimNavbar li a:active{
-    background-color: #111;
+    background-color: #111 !important;
   }
 
 .tamhilContent{

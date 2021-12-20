@@ -8,11 +8,9 @@ $("#inputAmount1").on("input", function () { // Amount changed
     let totalAmount = parseInt(sessionStorage.getItem('totalAmount1'));
     console.log("total amount is " + totalAmount);
 });
-
 function valuesTest(){ 
         console.log(sessionStorage.getItem("months"));
 }
-
 // let totalAmount = parseInt(sessionStorage.getItem('totalAmount1'));
 // let months = [];
 // let monthly=totalAmount/12;
@@ -45,7 +43,6 @@ function valuesTest(){
 //     myBarChart.configBar.data.datasets[0].data = months;
 //     myBarChart.update();
 // }
-
 let colors = [
     'rgba(255, 99, 132, 0.2)',
     'rgba(54, 162, 235, 0.2)',
@@ -88,12 +85,10 @@ function updateTable(){
             myBarChart.update();
         }
     }
-
 }
 function newFunc(){
     alert("newfunc");
 }
-
 function addMaslul(){
     var maslulNum = $('.maslulim').length +1;
     var div2=$(`<div class="maslulim" id="maslul${maslulNum}">
@@ -109,11 +104,13 @@ function addMaslul(){
                     <a id="totalAmount${maslulNum}">סכום כללי: </a>
                     <a id="monthlyAmount${maslulNum}">סכום חודשי: </a>
                 </div>`);
-    console.log(`#maslul${maslulNum-1}`);
-    var oldiv=$(`#maslul${maslulNum-1}`);
+    //console.log(`#maslul${maslulNum-1}`);
+    //var oldiv=$(`#maslul${maslulNum-1}`);
+    var oldiv = document.getElementById(`#maslul${maslulNum-1}`);
     $(oldiv).after(div2);
+    oldiv.style.visibility="none"
+    
 }
-
 function addTamhil(){
     console.log("new tamhil clicked")
     var ul = document.getElementById("tamhilimNavbar");
@@ -139,22 +136,23 @@ function addTamhil(){
 
     //console.log(tamhilId);
     var newDiv = document.createElement("div");
-    newDiv.innerHTML =`<div id="tamhil${liNum}"><input type="button" value="tamhil${liNum}"> </div>`;
+    newDiv.setAttribute(`id`, `tamhil${liNum}`);
+    newDiv.innerHTML =`<input type="button" value="tamhil${liNum}">`;
     var oldDiv = document.getElementById(`tamhil${liNum-1}`);
     //console.log(oldtamhil);
     $(oldDiv).after(newDiv);
     oldDiv.style.display="none";
-
 }
 function showTamhil(tamhilId){
     var liNum = $('ul#tamhilimNavbar li').length;
     for (let i=1; i< liNum; i++){
-        document.getElementById(`tamhil${i}`).style.display = "none";
+        document.getElementById(`tamhil${i}NavItem`).style.backgroundColor = "grey";
+        document.getElementById(`tamhil${i}`).style.display = "none ";
     }
     //let thisNum = tamhilId.slice(-8);
     //let thisNum = tamhilId[tamhilId.length-8];
     let thisNum = tamhilId.replace(/[^0-9]/g, ''); 
     document.getElementById(`tamhil${thisNum}`).style.display = "block";
+    document.getElementById(`tamhil${thisNum}NavItem`).style.backgroundColor = "rgb(70, 69, 69)";
     //console.log(thisNum);
-
 }
